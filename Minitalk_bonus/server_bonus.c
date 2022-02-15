@@ -40,7 +40,7 @@ void	ft_sig_handler(int signum, siginfo_t *siginfo, void *ucontext)
 	cpid = siginfo->si_pid;
 	if (cpid != ocpid && cpid != 0)
 	{
-		if ((last_char >> 8 & 1))
+		if ((g_last_char >> 8 & 1))
 			ft_putchar_fd(8, 1);
 		ft_reset_count(&p, &unic);
 		ocpid = cpid;
@@ -74,4 +74,4 @@ int	main(void)
 	while (1)
 		pause();
 	return (0);
-}
+	}
